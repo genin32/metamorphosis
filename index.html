@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Metamorphosis</title>
+    <link rel="stylesheet" href="style.css">
     <style>
       .logo
       {
         text-align: center;
+        filter:url("#goo");
       {
+      .logo .drip
+        {
+          height:30px;
+          width:30px;
+          border-radius: 50%;
+          background: white;
+          position: absolute;
+          top:-100%;
+          animation:falling 5s linear infinite;
+        }
+        @keyframes falling{
+          0%{
+            top:-100%;
+          }
+            50%{
+            top:0%;
+          }
+              80%{
+            top:80%;
+          }
+                    100%{
+            top:100%;
+          }
+        }
       .description
       {
         text-align: center;
@@ -13,7 +40,19 @@
     </style>
   </head>
   <body style="background-color:black" text="white">
-    <div class="logo"><img src="EAd.png" alt="logo" srcset="EAd.svg" /></div>
+    <div class="logo">
+      <img src="EAd.png" alt="logo" srcset="EAd.svg" />
+      <div class="drip"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
     <div class="description">
       <p>This page serves as a repository for Metamorphosis.</p>
       <p>The mod is available to download at <a href="https://www.nexusmods.com/fallout3/mods/23658">https://www.nexusmods.com/fallout3/mods/23658</a></p>
