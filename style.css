@@ -1,34 +1,16 @@
-.logo
-{
-text-align: center;
-filter:url("#goo");
-{
-.drip
-{
-height:30px;
-width:30px;
-border-radius: 50%;
-background: white;
-position: absolute;
-top:-100%;
-animation:falling 5s linear infinite;
+#logo{
+  position:absolute;
+  top:-400px;
+  border: solid 1px;
+  width:15%;
+  padding:2em;
+  background-color:purple;
+  animation: drop 2s ease forwards;
+  animation-iteration-count:infinite;
 }
-.description
-{
-text-align: center;
-{
-@keyframes falling
-{
-0%{
-top:-100%;
-}
-50%{
-top:0%;
-}
-80%{
-top:80%;
-}
-100%{
-top:100%;
-}
+
+@keyframes drop{
+  0%{opacity: 0}
+  70%{transform: translateY(700px)}
+  100%{transform: translateY(650px)}
 }
