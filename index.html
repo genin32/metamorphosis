@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+      $("#flip").click(function(){
+      $("#panel").slideToggle("slow");
+      });
+      });
+    </script>
     <style>
       @font-face { font-family: Monofonto; src: url('monofonto rg.otf'); }
       body {
@@ -38,6 +46,16 @@
       ul.requirements {
         list-style-type: "\25A0   ";
       }
+      #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+      }
+      #panel {
+      padding: 50px;
+      display: none;
+      }
     </style>
   </head>
   <body style=background-color:#202020 text=white>
@@ -55,11 +73,8 @@
         <li><a href="https://www.nexusmods.com/fallout3/mods/23682/">Command Extender</a></li>
         <li><a href="https://www.nexusmods.com/newvegas/mods/53635/">New Vegas Anti Crash</a></li>
       </ul>
-      <textarea name="message" rows="10" cols="30">
-        <ul class="requirements">
-          <li>Super mutant posture has been fixed. Thanks to C16!</li>
-        </ul>
-      </textarea>
+      <div id="flip">Click to slide down panel</div>
+      <div id="panel">Hello world!</div>
     </div>
   </body>
 </html>
