@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      function myFunction() {
+        document.getElementById("changelog").classList.toggle("show");
+      }
+    </script>
     <style>
       @font-face { font-family: Fixedsys; src: url('fsex300-webfont.ttf'); }
       body {
@@ -45,6 +50,9 @@
         color: white;
         padding: 16px;
         cursor: pointer;
+      }
+      .changelog {
+        display: none;
       }
     </style>
   </head>
