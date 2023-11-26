@@ -39,6 +39,12 @@
       ul.square_list {
         list-style-type:square;
       }
+      @media all {
+        .page-break { display: none; }
+      }
+      @media print {
+        .page-break { display: block; page-break-before: always; }
+      }
     </style>
   </head>
   <body>
@@ -66,6 +72,7 @@
         <h1>Installation</h1>
         <p>The mod is available to download at <a href="https://www.nexusmods.com/fallout3/mods/23658/" target="_blank">Nexus Mods</a></p>
         <p>Extract .zip archive to your Fallout 3 Data folder. Then enable the plugin via your designated mod manager.</p>
+        <div class="page-break"></div>
         <h1>Changelog</h1>
         <div class="changelog">
           <ul class="square_list">
