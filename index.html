@@ -45,6 +45,41 @@
       @media print {
         .page-break { display: block; page-break-before: always; }
       }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -59,7 +94,12 @@
         <p>As a super mutant you gain +15 Damage Resistance, +20 Poison Resistance and Radiation Immunity.</p>
         <p>You will be considered a friend to super mutants, but the rest of the world will not hesitate to shoot you. Mutants aren't welcome in most places.</p>
         <p>You wont be able to equip human armors, but there's a fairly large selection of 13 super mutant armors available. You can loot super mutant armor from super mutant corpses.</p>
-        <p>In addition, there are 5 new perks available to pick as a super mutant — Steady Arm, Psychotic, Centaur Friend, Juggernaut and Super Slam!</p>
+        <p>In addition, there are 5 new perks available to pick as a super mutant —</p>
+        <div class="tooltip">Steady Arm<span class="tooltiptext">Tooltip text</span></div>
+        <div class="tooltip">Psychotic<span class="tooltiptext">Tooltip text</span></div>
+        <div class="tooltip">Centaur Friend<span class="tooltiptext">Tooltip text</span></div>
+        <div class="tooltip">Juggernaut<span class="tooltiptext">Tooltip text</span></div>
+        <div class="tooltip">Super Slam!<span class="tooltiptext">Tooltip text</span></div>
         <p>Furthermore, there's a new super mutant companion - Ghunorn. You can find him outside Germantown Police HQ.</p>
         <h1>Requirements</h1>
         <ul class="square_list">
