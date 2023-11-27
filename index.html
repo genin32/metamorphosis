@@ -2,9 +2,26 @@
 <html>
   <head>
     <style>
-      @font-face { font-family: Fixedsys; src: url('monofonto rg.otf'); }
+      :root {
+        --goo: #afff66;
+      }
+      @font-face {
+        font-family: Monofonto;
+        src: url('monofonto rg.otf');
+      }
+      @media all {
+        .page-break {
+          display: none;
+        }
+      }
+      @media print {
+        .page-break {
+          display: block;
+          page-break-before: always;
+        }
+      }
       body {
-        font-family: Fixedsys;
+        font-family: Monofonto;
         background-color: black;
         color: white;
       }
@@ -17,38 +34,32 @@
         text-align:center;
       }
       a:link {
-        color: #afff66;
+        color: var(--goo);
         background-color: transparent;
         text-decoration: none;
       }
       a:visited {
-        color: #afff66;
+        color: var(--goo);
         background-color: transparent;
         text-decoration: none;
       }
       a:hover {
-        color: #afff66;
+        color: var(--goo);
         background-color: transparent;
         text-decoration: underline;
       }
       a:active {
-        color: #afff66;
+        color: var(--goo);
         background-color: transparent;
         text-decoration: underline;
       }
       ul.square_list {
         list-style-type:square;
       }
-      @media all {
-        .page-break { display: none; }
-      }
-      @media print {
-        .page-break { display: block; page-break-before: always; }
-      }
       .tooltip {
         position: relative;
         display: inline-block;
-        border-bottom: 1px dotted #afff66;
+        border-bottom: 1px dotted var(--goo);
       }
       .tooltip .tooltiptext {
         visibility: hidden;
@@ -80,7 +91,7 @@
   <body>
     <div class="main">
       <div class="logo">
-        <img src="EAd.png" alt="logo" srcset="EAd.svg"/>
+        <img src="Metamorphosis.png" alt="logo" srcset="Metamorphosis.svg"/>
         <p>Metamorphosis will turn you into something a lot uglier than a butterfly. — PC Gamer magazine</p>
       </div>
       <div class="description">
